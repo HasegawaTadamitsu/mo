@@ -1,6 +1,13 @@
 class MoshikomisController < ApplicationController
   # GET /moshikomis
   # GET /moshikomis.xml
+
+  def start
+  end
+
+  def search
+  end
+
   def index
     @moshikomis = Moshikomi.all
 
