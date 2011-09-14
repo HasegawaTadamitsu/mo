@@ -1,4 +1,39 @@
-<h1>Listing moshikomis</h1>
+<h1>search adn Listing moshikomis</h1>
+
+<% form_for @searchQaery, 
+         :url=> {:action=>'search',:controller =>'moshikomis'},
+         :html =>{:method => :get}   do |f| %>
+
+  <% if @searchQaery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@searchQaery.errors.count, "error") %> 
+      prohibited this search qaery from being searched:</h2>
+
+      <ul>
+      <% @searchQaery.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <table>
   <tr>

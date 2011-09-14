@@ -6,10 +6,9 @@ class MoshikomisController < ApplicationController
   end
 
   def search
-    @kensaku = Hash.new
-    @kensaku[:start_date] = Date.new
-    @kensaku[:start_end] = Date.new
-    @kensaku[:commentstart_end] = Date.new
+    @searchQaery = SearchQaery.new(params[:search_qaery])
+    str = @searchQaery.print
+    p str
     @moshikomis = Moshikomi.all
   end
 
