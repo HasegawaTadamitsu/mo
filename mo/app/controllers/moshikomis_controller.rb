@@ -6,15 +6,11 @@ class MoshikomisController < ApplicationController
   end
 
   def search
-  end
-
-  def index
+    @kensaku = Hash.new
+    @kensaku[:start_date] = Date.new
+    @kensaku[:start_end] = Date.new
+    @kensaku[:commentstart_end] = Date.new
     @moshikomis = Moshikomi.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @moshikomis }
-    end
   end
 
   # GET /moshikomis/1
