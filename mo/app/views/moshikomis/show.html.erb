@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @moshikomi.title %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @moshikomi.comment %>
+</p>
+
+<p>
+  <b>Hyouka kubun:</b>
+  <%= @moshikomi.hyouka_kubun %>
+</p>
+
+<p>
+  <b>Koshinyotei date:</b>
+  <%= @moshikomi.koshinyotei_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_moshikomi_path(@moshikomi) %> |
+<%= link_to 'Back', moshikomis_path %>

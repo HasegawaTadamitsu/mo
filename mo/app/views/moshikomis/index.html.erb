@@ -1,0 +1,29 @@
+<h1>Listing moshikomis</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Comment</th>
+    <th>Hyouka kubun</th>
+    <th>Koshinyotei date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @moshikomis.each do |moshikomi| %>
+  <tr>
+    <td><%= moshikomi.title %></td>
+    <td><%= moshikomi.comment %></td>
+    <td><%= moshikomi.hyouka_kubun %></td>
+    <td><%= moshikomi.koshinyotei_date %></td>
+    <td><%= link_to 'Show', moshikomi %></td>
+    <td><%= link_to 'Edit', edit_moshikomi_path(moshikomi) %></td>
+    <td><%= link_to 'Destroy', moshikomi, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Moshikomi', new_moshikomi_path %>

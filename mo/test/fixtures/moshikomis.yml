@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  comment: MyString
+  hyouka_kubun: MyString
+  koshinyotei_date: 2011-09-14
+
+two:
+  title: MyString
+  comment: MyString
+  hyouka_kubun: MyString
+  koshinyotei_date: 2011-09-14

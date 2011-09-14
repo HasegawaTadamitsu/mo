@@ -1,0 +1,33 @@
+<%= form_for(@moshikomi) do |f| %>
+  <% if @moshikomi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@moshikomi.errors.count, "error") %> prohibited this moshikomi from being saved:</h2>
+
+      <ul>
+      <% @moshikomi.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :hyouka_kubun %><br />
+    <%= f.text_field :hyouka_kubun %>
+  </div>
+  <div class="field">
+    <%= f.label :koshinyotei_date %><br />
+    <%= f.date_select :koshinyotei_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
